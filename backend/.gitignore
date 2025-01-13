@@ -1,0 +1,63 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio directories
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio Code files
+.vscode/
+
+# Rider project files
+.idea/
+
+# ASP.NET Scaffolding
+.scaffolding
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Azure Deployment files
+.publish/
+*.publishsettings
+
+# Configuration files
+appsettings.*.json
+
+# Log files
+*.log
+
+# npm package dependencies
+node_modules/
+
+# IDE-specific files
+*.swp
+*~
+
+# Backup files
+*.bak
+*.old
+
+# macOS specific
+.DS_Store
+
+# Thumbnails
+Thumbs.db
