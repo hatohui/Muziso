@@ -40,7 +40,7 @@ bld/
 *.publishsettings
 
 # Configuration files
-appsettings.*.json
+# appsettings.*.json
 
 # Log files
 *.log

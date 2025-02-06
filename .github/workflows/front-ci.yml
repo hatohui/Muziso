@@ -1,0 +1,25 @@
+name: Frontend CI
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "frontend/**"
+  push:
+    branches:
+      - master
+    paths:
+      - "frontend/**"
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, 'frontend')
+    steps:
+      - name: Check out the frontend folder
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: frontend
+      - name: check
+        run: ls -a
