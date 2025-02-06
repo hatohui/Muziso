@@ -2,26 +2,22 @@ name: Frontend CI
 
 on:
   pull_request:
-    branches:
-      - main
-    paths:
-      - "frontend/**"
+    branches: [main]
+    paths: ["frontend/**"]
   push:
-    branches:
-      - main
-    paths:
-      - "frontend/**"
+    paths: ["frontend/**"]
 
 jobs:
   pipeline:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the frontend folder
+      - name: Code checkout
         uses: actions/checkout@v4
         with:
-          sparse-checkout: frontend
-      - name: check
-        run: |
-          ls -a
-          cd frontend
-          ls -a
+          path: frontend
+      - name: Set up node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check
+        run: ls -a
