@@ -1,0 +1,25 @@
+name: Backend CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ["backend/**"]
+  push:
+    paths: ["backend/**"]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: backend
+      - name: Set Up .NET environment
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build project
+        run: dotnet build --configuration Release --no-restore
