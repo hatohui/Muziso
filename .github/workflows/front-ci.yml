@@ -21,4 +21,7 @@ jobs:
         with:
           sparse-checkout: frontend
       - name: check
-        run: ls -a
+        run: |
+          ls -a
+          cd frontend
+          ls -a
