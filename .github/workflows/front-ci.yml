@@ -15,16 +15,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: frontend
+          sparse-checkout-cone-mode: false
+
       - name: Set up node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Install dependencies
         working-directory: frontend
         run: npm i
+
       - name: Style check
         working-directory: frontend
         run: npm run lint
+
       - name: Build the app
         working-directory: frontend
         run: npm run build

@@ -3,6 +3,6 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-app.MapGet("/test", () => "Hi tedst");
+app.MapGet("/test", () => "Hiasd tedst");
 
 app.Run();
