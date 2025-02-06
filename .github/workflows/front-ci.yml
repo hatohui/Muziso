@@ -14,7 +14,7 @@ jobs:
       - name: Code checkout
         uses: actions/checkout@v4
         with:
-          path: frontend
+          sparse-checkout: frontend
       - name: Set up node
         uses: actions/setup-node@v4
         with:
